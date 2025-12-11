@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Environment Variables -java - springboot ###
+.env
+.env2
+.env3
