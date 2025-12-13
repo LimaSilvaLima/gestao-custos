@@ -1,6 +1,7 @@
 package com.javadevweek.gestao_custos.controller;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.javadevweek.gestao_custos.custom_messages.ErrorMessage;
 import com.javadevweek.gestao_custos.entity.Despesa;
+import com.javadevweek.gestao_custos.useCases.BuscarDespesaUseCase;
 import com.javadevweek.gestao_custos.useCases.CadastroDespesaUseCase;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,6 +25,8 @@ public class GestaoDespesaController {
     
     @Autowired
     CadastroDespesaUseCase cadastroDespesaUseCase;
+    @Autowired
+    BuscarDespesaUseCase buscarDespesaUseCase;
 
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody Despesa despesa) {
@@ -38,9 +42,12 @@ public class GestaoDespesaController {
     }
 
     @GetMapping("/{email}")
-    public void findbyEmailAndData(@PathVariable String email, @RequestParam(required = false) LocalDate data) {
-        System.out.println("Email :"  + email);
-        System.out.println("Data :"  + data);
+    public List<Despesa> findByEmailAndData(@PathVariable String email, @RequestParam(required = false) LocalDate data) {
+        
+        return buscarDespesaUseCase.execute(email, data);
+
+        /*System.out.println("Email :"  + email);
+        System.out.println("Data :"  + data); */
     }
 
 }
