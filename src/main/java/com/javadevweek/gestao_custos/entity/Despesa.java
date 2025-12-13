@@ -4,8 +4,10 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.data.annotation.CreatedDate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,12 +20,17 @@ public class Despesa {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
+    @Column(nullable = false)
     private String descricao;
+    @Column(nullable = false)
     private LocalDate data;
+    @Column(nullable = false)
     private BigDecimal valor;
+    @Column(length = 80, nullable = false)
     private String categoria;
+    @Column(nullable = false)
     private String email;
-    @CreatedDate
+    @CreationTimestamp
     private LocalDate data_criacao;
     public UUID getId() {
         return id;

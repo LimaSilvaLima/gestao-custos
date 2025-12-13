@@ -1,0 +1,21 @@
+DATABASE_URL=jdbc:postgresql://localhost:5432/neondb
+DB_USERNAME=postgres
+DB_PASSWORD=123456
+
+
+#"name": "silvalima",
+# "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJsb2dpbi1hdXRoLWFwaSIsInN1YiI6ImxpbWFzaWx2YWxpbWFAaG90bWFpbC5jb20iLCJleHAiOjE3NjA5NzY5NjJ9.BNdH3kzk4jBsMyOS-OSLJTaJo0TFewi2uCrsLOvAazo"
+#"limasilvalimahotmail.com"
+
+
+
+#
+#   "name": "joselimaa",
+#  "email": "jose.lima03@aluno.unifametro.edu.br",
+#    "password": "123456789"
+
+#Link do figma
+#https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbjJQb2RSYUJlTEpEWHA2UUg5Yk5Rcm5JLWxVZ3xBQ3Jtc0tub2NJa2w1cUZsS2FwRzEzS0RrdkFlMWRGWXBXUkRCbDIwR1pZMlBBOE5ZUFFqMUVPQlVvRWtYbXVRTTNWbnlXa0lNVGZqdC1Rc2RhU2tOV1MxNFZNSXVJZmUxX0t2NnRCX3M0ZmtPZlBCTHpZaWhaYw&q=https%3A%2F%2Fwww.figma.com%2Ffile%2F7T1wkErczpMOBeqtpVjMSb%2FLogin-Page-Design%3Ftype%3Ddesign%26node-id%3D6%253A920%26mode%3Ddesign%26t%3DYDa0SydWP9beF1vf-1&v=6qbuuPM_de4	
+#  https://www.figma.com/design/7T1wkErczpMOBeqtpVjMSb/Login-Page-Design?node-id=6-920&p=f&t=cdk6RYxoETZ7NeID-0
+
+
