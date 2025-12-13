@@ -2,11 +2,20 @@ package com.javadevweek.gestao_custos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import io.github.cdimascio.dotenv.Dotenv;
+
 
 @SpringBootApplication
 public class GestaoCustosApplication {
 
 	public static void main(String[] args) {
+		Dotenv.configure()
+                .directory("./") // Garante que ele procure o .env na raiz do projeto
+                .ignoreIfMissing() // Não falha se o arquivo .env não existir
+				.systemProperties() // Carrega as variáveis do .env nas propriedades do sistema
+                .load(); // Efetivamente carrega as variáveis
+
+		
 		SpringApplication.run(GestaoCustosApplication.class, args);
 	}
 
