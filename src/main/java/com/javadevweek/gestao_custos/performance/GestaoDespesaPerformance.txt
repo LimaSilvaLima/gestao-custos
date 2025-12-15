@@ -2,7 +2,8 @@ package com.javadevweek.gestao_custos.performance;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.javadevweek.gestao_custos.entity.Despesa;
 import com.javadevweek.gestao_custos.repository.DespesaRepository;
 
+//@EnableCaching
 @RestController
 @RequestMapping("/gestao/performance")
-//@EnableCaching
 public class GestaoDespesaPerformance {
 
     @Autowired
@@ -30,8 +31,7 @@ public class GestaoDespesaPerformance {
         var despesas = despesaRepository.findAll();
         long fim = System.currentTimeMillis();
         System.out.println("Tempo de execução (ms): " + (fim - inicio));
-
-        return ResponseEntity.ok(despesas);
+         return ResponseEntity.ok(despesas);
     }
 
     @GetMapping("/com-paginacao")
@@ -58,9 +58,8 @@ public class GestaoDespesaPerformance {
         return ResponseEntity.ok(despesas);
     }
 
-    /*
     @Cacheable(value = "gastoPorEmailCache", key = "#email + '-' + #pageable.pageNumber + '-' + #pageable.pageSize  ")
-    @GetMapping("/cache/{email}")
+    @GetMapping("/cache")
     public ResponseEntity<Page<Despesa>>CacheComPaginacao(@PathVariable String email, Pageable pageable) {
         
         StopWatch stopWatch = new StopWatch();
@@ -73,6 +72,6 @@ public class GestaoDespesaPerformance {
         
         
          
-    }*/
-
+    }
 }
+ 

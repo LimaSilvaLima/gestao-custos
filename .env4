@@ -1,0 +1,11 @@
+DATABASE_URL=jdbc:h2:file:./data/gestao-despesa
+DB_USERNAME=username=sa
+DB_PASSWORD=""
+
+JWT_Secret=my-secret-key-from-video
+  
+
+#spring.datasource.url=jdbc:postgresql://ep-misty-dew-ad0glbbv-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channelBinding=require
+#spring.datasource.username=neondb_owner
+#spring.datasource.password=npg_Fxdrtc85mNMq
+#spring.datasource.driver-class-name=org.postgresql.Driver

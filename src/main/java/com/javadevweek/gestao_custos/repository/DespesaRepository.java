@@ -14,5 +14,6 @@ public interface  DespesaRepository extends JpaRepository<Despesa, UUID> {
     List<Despesa> findByEmail(String email);
     List<Despesa> findByEmailAndData(String email, LocalDate data);
     Page<Despesa> findByEmail(String email, Pageable pageable);
+    
 
 }
