@@ -21,7 +21,7 @@ public class CadastroDespesaUseCase {
         return despesa;
 
         /*System.out.println(despesa.getDescricao());
-        System.out.println(despesa.getValor());
+        System.out.println(despesa.getValor());.+
         System.out.println(despesa.getData());
         System.out.println(despesa.getCategoria());
         System.out.println(despesa.getEmail());

@@ -14,8 +14,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+//SOLIDE
+// single responsibility principle
+
 @Entity
-@Table(name = "despesas")
+@Table(name = "despesa")
 public class Despesa {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
