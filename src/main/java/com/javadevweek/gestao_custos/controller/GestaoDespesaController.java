@@ -41,7 +41,7 @@ public class GestaoDespesaController {
                
     }
 
-    @GetMapping("/{email}")
+    @GetMapping("{email}")
     public List<Despesa> findByEmailAndData(@PathVariable String email, @RequestParam(required = false) LocalDate data) {
         
         return buscarDespesaUseCase.execute(email, data);
