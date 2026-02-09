@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.javadevweek.gestao_custos.entity.Despesa;
 
+
 public interface  DespesaRepository extends JpaRepository<Despesa, UUID> {
 
     List<Despesa> findByEmail(String email);
