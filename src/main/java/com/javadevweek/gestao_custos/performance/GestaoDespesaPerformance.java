@@ -46,6 +46,7 @@ public class GestaoDespesaPerformance {
         return ResponseEntity.ok(despesas);
     }
 
+    
     @GetMapping("/com-paginacao/{email}")
     public ResponseEntity<Page<Despesa>>listarComPaginacaoPorEmail(@PathVariable String email, Pageable pageable) {
         
@@ -57,6 +58,7 @@ public class GestaoDespesaPerformance {
 
         return ResponseEntity.ok(despesas);
     }
+
 
     /*
     @Cacheable(value = "gastoPorEmailCache", key = "#email + '-' + #pageable.pageNumber + '-' + #pageable.pageSize  ")
