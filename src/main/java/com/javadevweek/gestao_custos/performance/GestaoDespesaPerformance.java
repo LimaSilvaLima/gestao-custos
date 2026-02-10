@@ -1,8 +1,8 @@
 package com.javadevweek.gestao_custos.performance;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +29,7 @@ public class GestaoDespesaPerformance {
         long inicio = System.currentTimeMillis();
         var despesas = despesaRepository.findAll();
         long fim = System.currentTimeMillis();
-        System.out.println("Tempo de execução (ms): " + (fim - inicio));
+        System.out.println("Tempo de execução : " + (fim - inicio) + "ms");
 
         return ResponseEntity.ok(despesas);
     }
